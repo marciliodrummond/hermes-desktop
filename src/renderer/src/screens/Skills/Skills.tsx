@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { Search, X, Download, Trash, Refresh } from "../../assets/icons";
 import { AgentMarkdown } from "../../components/AgentMarkdown";
 import { useI18n } from "../../components/useI18n";
+import skillDescriptionsPtBR from "../../data/skillDescriptionsPtBR";
 
 interface InstalledSkill {
   name: string;
@@ -35,7 +36,14 @@ function Skills({
   embedded = false,
   onBrowse,
 }: SkillsProps): React.JSX.Element {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  // Show bundled-skill descriptions in pt-BR when the UI is in Portuguese.
+  // Skill NAMES stay as-is (technical identifiers); only the explanatory
+  // line is localized, falling back to the skill's own (English) text.
+  const skillDesc = (s: { name: string; description: string }): string =>
+    locale === "pt-BR"
+      ? (skillDescriptionsPtBR[s.name] ?? s.description)
+      : s.description;
   const [tab, setTab] = useState<Tab>("installed");
   const [installedSkills, setInstalledSkills] = useState<InstalledSkill[]>([]);
   const [bundledSkills, setBundledSkills] = useState<BundledSkill[]>([]);
@@ -115,7 +123,7 @@ function Skills({
       const q = search.toLowerCase();
       return (
         s.name.toLowerCase().includes(q) ||
-        s.description.toLowerCase().includes(q) ||
+        skillDesc(s).toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q)
       );
     }
@@ -128,7 +136,7 @@ function Skills({
       const q = search.toLowerCase();
       matches =
         s.name.toLowerCase().includes(q) ||
-        s.description.toLowerCase().includes(q) ||
+        skillDesc(s).toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q);
     }
     if (categoryFilter) {
@@ -338,7 +346,7 @@ function Skills({
                 <div className="skills-card-name">{skill.name}</div>
                 {skill.description && (
                   <div className="skills-card-description">
-                    {skill.description}
+                    {skillDesc(skill)}
                   </div>
                 )}
               </button>
@@ -364,7 +372,7 @@ function Skills({
                 <div className="skills-card-name">{skill.name}</div>
                 {skill.description && (
                   <div className="skills-card-description">
-                    {skill.description}
+                    {skillDesc(skill)}
                   </div>
                 )}
                 <div className="skills-card-footer">
