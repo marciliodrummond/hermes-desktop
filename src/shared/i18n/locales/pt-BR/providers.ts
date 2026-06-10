@@ -1,15 +1,15 @@
 export default {
   title: "Provedores",
   subtitle:
-    "Conecte os serviços de IA que você usa: chaves de API e logins ficam guardados aqui",
+    "Conecte os serviços de IA que você usa. As chaves de API e os logins ficam salvos aqui.",
   oauth: {
     sectionTitle: "Entrar com sua assinatura (OAuth)",
     sectionHint:
-      "Entre com uma conta que você já assina, sem precisar de chave de API. O login abre no seu navegador.",
+      "Entre com uma conta que você já assina, sem precisar de chave de API. O login abre no navegador.",
     signIn: "Entrar",
-    runningHint: "Siga os passos abaixo para terminar de entrar.",
+    runningHint: "Siga os passos abaixo para concluir o login.",
     successHint:
-      "Login feito! Agora é só escolher este provedor.",
+      "Login concluído! Agora é só escolher este provedor.",
     failed: "Não foi possível entrar.",
     codexDesc: "Use seu plano do ChatGPT Codex",
     xaiDesc: "Use sua assinatura do xAI Grok",

@@ -1,7 +1,7 @@
 export default {
   title: "Perfis",
   subtitle:
-    "Cada perfil é um espaço de trabalho separado, com suas próprias configurações, memória e habilidades",
+    "Cada perfil é um espaço de trabalho independente, com configurações, memória e habilidades próprias",
   newAgent: "Novo perfil",
   namePlaceholder: "Nome do perfil (ex: programador)",
   cloneConfig: "Copiar configurações e chaves de API do perfil padrão",

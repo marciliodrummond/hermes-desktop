@@ -51,7 +51,7 @@ export default {
   },
   thinking: "Pensando…",
   thought: "Pensamento",
-  toolCall: "Chamada de ferramenta",
+  toolCall: "Uso de ferramenta",
   toolResult: "Resultado da ferramenta",
   newChat: "Nova conversa (Cmd+N)",
   clearChat: "Limpar conversa",

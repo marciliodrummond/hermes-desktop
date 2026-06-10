@@ -1,8 +1,8 @@
 export default {
   installBroken:
-    "O Hermes está instalado, mas algo deu errado com ele. Reinstale para resolver.",
+    "O Hermes está instalado, mas parece estar com problema. Reinstale para corrigir.",
   verifyFailed:
-    "O Hermes está instalado, mas não conseguimos confirmar se está tudo certo. Deve funcionar normalmente — se tiver problemas, reinstale.",
+    "O Hermes está instalado, mas não deu para confirmar se está tudo certo. Deve funcionar normalmente — se der algum problema, reinstale.",
   verifyReinstall: "Reinstalar",
-  verifyDismiss: "Fechar aviso",
+  verifyDismiss: "Dispensar",
 } as const;

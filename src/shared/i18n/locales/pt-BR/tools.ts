@@ -1,21 +1,21 @@
 export default {
   title: "Ferramentas",
   subtitle:
-    "Escolha o que o agente pode fazer durante as conversas, ligando ou desligando cada ferramenta",
+    "Escolha o que o agente pode fazer nas conversas: ligue ou desligue cada ferramenta",
   web: {
-    label: "Busca na internet",
-    description: "Busca na internet e lê o conteúdo de páginas",
+    label: "Buscar na internet",
+    description: "Busca na internet e lê o conteúdo das páginas",
   },
   x_search: {
-    label: "Busca no X",
+    label: "Buscar no X",
     description: "Busca posts e conteúdo no X (Twitter)",
   },
   browser: {
-    label: "Navegador",
-    description: "Acessa sites, clica, digita e interage com as páginas",
+    label: "Usar o navegador",
+    description: "Abre sites, clica, digita e interage com as páginas",
   },
   terminal: {
-    label: "Terminal",
+    label: "Usar o terminal",
     description: "Roda comandos e scripts no terminal",
   },
   file: {
@@ -24,14 +24,14 @@ export default {
   },
   code_execution: {
     label: "Rodar código",
-    description: "Roda código Python e do terminal na hora",
+    description: "Roda código Python e comandos do terminal na hora",
   },
   computer_use: {
-    label: "Controle do computador",
-    description: "Controla a área de trabalho — move o mouse, clica e digita",
+    label: "Usar o computador",
+    description: "Controla a tela do computador — move o mouse, clica e digita",
   },
   vision: {
-    label: "Visão",
+    label: "Ver imagens",
     description: "Analisa imagens e conteúdo visual",
   },
   image_gen: {
@@ -43,27 +43,27 @@ export default {
     description: "Cria vídeos a partir de texto ou de imagens",
   },
   tts: {
-    label: "Texto em voz",
-    description: "Transforma texto em áudio falado",
+    label: "Ler em voz alta",
+    description: "Transforma texto em voz",
   },
   skills: {
     label: "Habilidades",
-    description: "Cria, organiza e usa habilidades que dá para reaproveitar",
+    description: "Cria, organiza e reaproveita habilidades",
   },
   memory: {
     label: "Memória",
-    description: "Guarda e relembra informações ao longo do tempo",
+    description: "Guarda e lembra informações ao longo do tempo",
   },
   session_search: {
     label: "Buscar em conversas",
-    description: "Busca em conversas anteriores",
+    description: "Procura em conversas anteriores",
   },
   clarify: {
-    label: "Perguntas para tirar dúvidas",
+    label: "Tirar dúvidas",
     description: "Pergunta a você quando precisar de mais detalhes",
   },
   delegation: {
-    label: "Delegação",
+    label: "Delegar tarefas",
     description: "Cria agentes auxiliares para tocar tarefas em paralelo",
   },
   cronjob: {
@@ -71,11 +71,11 @@ export default {
     description: "Cria e gerencia tarefas que rodam na hora marcada",
   },
   moa: {
-    label: "Combinação de agentes",
+    label: "Combinar agentes",
     description: "Coordena vários modelos de IA trabalhando juntos",
   },
   todo: {
-    label: "Planejamento de tarefas",
+    label: "Planejar tarefas",
     description: "Cria e organiza listas de tarefas para trabalhos mais longos",
   },
   mcpServers: "Servidores MCP",

@@ -5,16 +5,16 @@ export default {
   empty: "Você ainda não adicionou nenhum modelo",
   noMatch: "Nenhum modelo encontrado para essa busca",
   deleteConfirm: "Excluir?",
-  displayName: "Nome que vai aparecer",
+  displayName: "Nome de exibição",
   modelId: "ID do modelo",
   namePlaceholder: "ex: Claude Sonnet 4",
   modelIdPlaceholder: "ex: anthropic/claude-sonnet-4-20250514",
   baseUrlPlaceholder: "http://localhost:1234/v1",
   subtitle:
-    "Aqui ficam seus modelos. Eles aparecem na hora de escolher qual usar na Conversa.",
+    "Seus modelos ficam aqui. Eles aparecem na hora de escolher qual usar na Conversa.",
   addModel: "Adicionar modelo",
   emptyHint:
-    "Os modelos que você adicionar aqui aparecem na hora de escolher qual usar na Conversa. Os que você configurar nas Configurações entram nesta lista automaticamente.",
+    "Os modelos adicionados aqui aparecem na hora de escolher qual usar na Conversa. Os que você configurar em Configurações entram nesta lista automaticamente.",
   editModel: "Editar modelo",
   update: "Salvar",
   deleteModelTitle: "Excluir modelo",
@@ -22,10 +22,10 @@ export default {
   no: "Não",
   nameRequired: "Preencha o nome e o ID do modelo",
   customProviderHint:
-    "Só é preciso para provedores próprios ou que rodam no seu computador",
+    "Necessário apenas para provedores próprios ou que rodam no seu computador",
   apiKeyLabel: "Chave da API",
   apiKeyHint:
-    "Guardada como variável de ambiente. O Hermes escolhe a chave certa pela URL ou usa CUSTOM_API_KEY se não encontrar.",
+    "Salva como variável de ambiente. O Hermes escolhe a chave certa pela URL ou usa a CUSTOM_API_KEY se não encontrar.",
   allProviders: "Todos",
   browseRegistry: "Explorar modelos",
   registryTitle: "Catálogo de modelos",
@@ -33,6 +33,6 @@ export default {
   registryAddButton: "Adicionar",
   registryAddedLabel: "Adicionado",
   registryCustomBadge: "via URL base",
-  registryAdded: "{{name}} foi adicionado aos seus modelos",
+  registryAdded: "{{name}} adicionado aos seus modelos",
   registryLoadError: "Não foi possível carregar o catálogo de modelos",
 } as const;

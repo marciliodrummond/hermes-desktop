@@ -45,7 +45,7 @@ export default {
   restartToUpdate: "Reiniciar para atualizar",
   updateFailed: "Não foi possível atualizar",
   errorTitle: "Algo deu errado",
-  errorMessage: "Aconteceu um erro inesperado.",
+  errorMessage: "Aconteceu um erro inesperado. Tente de novo.",
   tryAgain: "Tentar de novo",
   copied: "Copiado!",
 } as const;

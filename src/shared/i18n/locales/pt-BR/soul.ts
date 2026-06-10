@@ -7,5 +7,5 @@ export default {
   resetConfirm:
     "Voltar à personalidade padrão? Você vai perder o que escreveu aqui.",
   placeholder: "Escreva aqui como você quer que o seu agente se comporte...",
-  hint: "Este texto é lido no começo de cada conversa. Use-o para definir o jeito do seu agente, como ele se comunica e instruções que valem sempre.",
+  hint: "Este texto é lido no começo de toda conversa. Use-o para definir o jeito do seu agente, o tom e as instruções que valem sempre.",
 } as const;

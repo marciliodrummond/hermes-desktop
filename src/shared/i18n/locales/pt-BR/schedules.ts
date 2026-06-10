@@ -52,7 +52,7 @@ export default {
   triggerNow: "Rodar agora",
   nextRun: "Próxima",
   lastRun: "Última",
-  runCount: "Vezes que rodou",
+  runCount: "Execuções",
   deliveredTo: "Enviado para",
   skills: "Habilidades",
 } as const;

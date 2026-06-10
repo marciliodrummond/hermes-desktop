@@ -50,7 +50,7 @@ export default {
       "Aprende seu perfil entre conversas, com perguntas e respostas guiadas e busca por significado",
     hindsight:
       "Memória de longo prazo que conecta o conhecimento em rede e busca por várias estratégias",
-    mem0: "Extrai fatos no servidor usando IA, com busca por significado e sem repetições",
+    mem0: "Extrai fatos no servidor com IA, busca por significado e sem repetições",
     retaindb: "Memória na nuvem com busca combinada e 7 tipos de memória",
     supermemory:
       "Memória de longo prazo por significado, que lembra seu perfil e reconhece pessoas e coisas citadas",
