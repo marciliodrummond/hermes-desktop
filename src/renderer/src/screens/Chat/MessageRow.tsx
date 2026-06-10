@@ -1,5 +1,5 @@
 import { memo, useMemo } from "react";
-import icon from "../../assets/icon.png";
+import icon from "../../assets/brand/si-icon.png";
 import { AgentMarkdown } from "../../components/AgentMarkdown";
 import { AttachmentChip } from "../../components/AttachmentChip";
 import { MediaSegmentView } from "../../components/MediaImage";

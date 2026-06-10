@@ -174,6 +174,9 @@ import soulPt from "./locales/pt-BR/soul";
 import memoryPt from "./locales/pt-BR/memory";
 import installPt from "./locales/pt-BR/install";
 import constantsPt from "./locales/pt-BR/constants";
+import discoverPt from "./locales/pt-BR/discover";
+import kanbanPt from "./locales/pt-BR/kanban";
+import diagnosePt from "./locales/pt-BR/diagnose";
 import commonPtPt from "./locales/pt-PT/common";
 import navigationPtPt from "./locales/pt-PT/navigation";
 import welcomePtPt from "./locales/pt-PT/welcome";
@@ -395,6 +398,9 @@ export const resources = {
       memory: memoryPt,
       install: installPt,
       constants: constantsPt,
+      discover: discoverPt,
+      kanban: kanbanPt,
+      diagnose: diagnosePt,
     },
   },
   "pt-PT": {

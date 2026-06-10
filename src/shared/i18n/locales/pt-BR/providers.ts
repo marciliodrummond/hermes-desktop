@@ -1,19 +1,21 @@
 export default {
   title: "Provedores",
-  subtitle: "Configure provedores de LLM, chaves de API e pools de credenciais",
+  subtitle:
+    "Conecte os serviços de IA que você usa: chaves de API e logins ficam guardados aqui",
   oauth: {
-    sectionTitle: "Assinaturas / Planos OAuth",
+    sectionTitle: "Entrar com sua assinatura (OAuth)",
     sectionHint:
-      "Faça login com uma assinatura do provedor em vez de uma chave de API. A autorização acontece no navegador.",
+      "Entre com uma conta que você já assina, sem precisar de chave de API. O login abre no seu navegador.",
     signIn: "Entrar",
-    runningHint: "Siga os passos abaixo para concluir o login.",
+    runningHint: "Siga os passos abaixo para terminar de entrar.",
     successHint:
-      "Login efetuado com sucesso. Agora você pode selecionar este provedor.",
-    failed: "Falha no login.",
-    codexDesc: "Use seu plano ChatGPT Codex",
+      "Login feito! Agora é só escolher este provedor.",
+    failed: "Não foi possível entrar.",
+    codexDesc: "Use seu plano do ChatGPT Codex",
     xaiDesc: "Use sua assinatura do xAI Grok",
     qwenDesc: "Use sua assinatura do Qwen",
-    geminiDesc: "Use seu plano Google AI Pro / Gemini",
+    geminiDesc: "Use seu plano do Google AI Pro / Gemini",
     minimaxDesc: "Use sua assinatura do MiniMax",
+    nousDesc: "Entre com sua assinatura do Nous Portal",
   },
 } as const;

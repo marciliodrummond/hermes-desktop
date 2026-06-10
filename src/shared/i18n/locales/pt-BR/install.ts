@@ -1,34 +1,34 @@
 export default {
   preparing: "Preparando...",
-  startingInstall: "Iniciando instalação",
-  installationComplete: "Instalação Concluída",
-  installationFailed: "Falha na Instalação",
-  installingHermes: "Instalando Hermes Agent",
+  startingInstall: "Começando a instalação",
+  installationComplete: "Tudo pronto!",
+  installationFailed: "A instalação não deu certo",
+  installingHermes: "Instalando o Hermes Agent",
   installationFailedHint:
-    "A instalação falhou. Por favor, tente novamente ou instale via terminal.",
-  retryInstallation: "Tentar Instalação Novamente",
+    "A instalação não deu certo. Tente de novo ou instale pelo terminal.",
+  retryInstallation: "Tentar de novo",
   copied: "Copiado!",
-  copyLogs: "Copiar Logs",
-  stepLabel: "Passo {{step}}/{{total}}: {{title}}",
-  waitingToStart: "Aguardando para iniciar...",
-  continueToSetup: "Continuar para a Configuração",
+  copyLogs: "Copiar registro de erros",
+  stepLabel: "Passo {{step}} de {{total}}: {{title}}",
+  waitingToStart: "Aguardando para começar...",
+  continueToSetup: "Ir para a configuração",
   confirmTitle: "Antes de instalar",
   confirmLocationLabel: "O Hermes será instalado em:",
   confirmFresh:
-    "Nenhuma instalação existente foi encontrada aqui — uma cópia nova será configurada.",
+    "Não encontramos nenhuma instalação aqui — vamos criar uma do zero.",
   confirmUpdate:
-    "Há uma instalação do Hermes aqui — ela será atualizada para a versão mais recente.",
+    "Já existe um Hermes nesta pasta — ele será atualizado para a versão mais recente.",
   confirmReplace:
-    "Existe uma pasta aqui, mas não é uma instalação válida do Hermes — instalar irá excluí-la e substituí-la.",
+    "Existe uma pasta aqui, mas ela não é uma instalação válida do Hermes. Ao instalar, essa pasta será apagada e substituída.",
   confirmNotInherited:
-    "Se você instalou o Hermes em outro lugar, ou pela linha de comando, ela não será aproveitada.",
+    "Se você já tinha instalado o Hermes em outro lugar ou pelo terminal, essa instalação não será aproveitada.",
   confirmInstallBtn: "Instalar o Hermes",
-  useExistingBtn: "Usar uma instalação existente",
+  useExistingBtn: "Usar uma instalação que já tenho",
   useExistingHint:
-    "Selecione a pasta que contém sua instalação existente do Hermes (a pasta que contém a pasta hermes-agent).",
+    "Escolha a pasta onde o Hermes já está instalado (a pasta que tem dentro dela a pasta hermes-agent).",
   useExistingInvalid:
-    "Nenhuma instalação utilizável do Hermes foi encontrada nessa pasta.",
+    "Não encontramos nenhuma instalação do Hermes que possa ser usada nessa pasta.",
   useExistingDone:
-    "Instalação existente definida — feche e reabra o Hermes para aplicá-la.",
-  useExistingQuitBtn: "Sair do Hermes",
+    "Pronto! Feche e abra o Hermes de novo para começar a usar essa instalação.",
+  useExistingQuitBtn: "Fechar o Hermes",
 } as const;

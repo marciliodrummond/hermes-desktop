@@ -20,7 +20,7 @@ import Schedules from "../Schedules/Schedules";
 import Kanban from "../Kanban/Kanban";
 import RemoteNotice from "../../components/RemoteNotice";
 import VerifyWarningBanner from "../../components/VerifyWarningBanner";
-import siLogoDark from "../../assets/brand/si-logo-dark.png";
+import siLogoMenu from "../../assets/brand/si-logo-menu.svg";
 import siLogoLight from "../../assets/brand/si-logo-light.png";
 import {
   ChatBubble,
@@ -297,7 +297,7 @@ function Layout({
         <div className="sidebar-brand">
           <img
             className="sidebar-logo"
-            src={isLightTheme ? siLogoLight : siLogoDark}
+            src={isLightTheme ? siLogoLight : siLogoMenu}
             alt="SI Agent"
             style={{ height: 30, width: 150, objectFit: "contain" }}
           />
@@ -512,7 +512,7 @@ function Layout({
         {visitedViews.has("gateway") && (
           <div style={paneStyle("gateway")}>
             {remoteMode ? (
-              <RemoteNotice feature="Gateway" />
+              <RemoteNotice feature="Conexões" />
             ) : (
               <Gateway profile={activeProfile} />
             )}

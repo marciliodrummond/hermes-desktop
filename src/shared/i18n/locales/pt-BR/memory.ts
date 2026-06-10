@@ -1,36 +1,37 @@
 export default {
   title: "Memória",
-  subtitle: "O que o Hermes lembra sobre você e seu ambiente entre as sessões.",
-  sessions: "Sessões",
+  subtitle:
+    "O que o agente guarda sobre você e seu jeito de trabalhar, de uma conversa para a outra.",
+  sessions: "Conversas",
   messages: "Mensagens",
   memories: "Memórias",
   providersTitle: "Provedores",
-  agentMemory: "Memória do Agente",
-  userProfile: "Perfil do Usuário",
-  entries: "{{count}} entradas",
-  addMemory: "Adicionar Memória",
-  addFailed: "Falha ao adicionar entrada",
-  updateFailed: "Falha ao atualizar entrada",
-  saveFailed: "Falha ao salvar",
+  agentMemory: "Memória do agente",
+  userProfile: "Seu perfil",
+  entries: "{{count}} itens",
+  addMemory: "Adicionar memória",
+  addFailed: "Não foi possível adicionar",
+  updateFailed: "Não foi possível atualizar",
+  saveFailed: "Não foi possível salvar",
   entriesPlaceholder:
-    "ex: O usuário prefere TypeScript em vez de JavaScript. Sempre use o modo estrito.",
+    "ex.: Prefiro TypeScript a JavaScript. Use sempre o modo estrito.",
   userProfilePlaceholder:
-    "ex: Nome: Alex. Desenvolvedor sênior. Prefere respostas concisas. Usa macOS com zsh. Fuso horário: PST.",
+    "ex.: Nome: Alex. Desenvolvedora sênior. Gosto de respostas diretas. Uso macOS com zsh. Fuso horário: PST.",
   noProvidersFound: "Nenhum provedor de memória encontrado nesta instalação.",
-  openProviderWebsite: "Abrir site do provedor",
+  openProviderWebsite: "Abrir o site do provedor",
   noMemoriesYet:
-    "Nenhuma memória ainda. O Hermes salvará fatos importantes conforme vocês conversam.",
-  noMemoryEntries: "Nenhuma entrada de memória ainda.",
-  noToolsetsFound: "Nenhum conjunto de ferramentas encontrado.",
+    "Nenhuma memória por enquanto. O agente vai guardar o que for importante conforme você conversa.",
+  noMemoryEntries: "Nenhuma memória por enquanto.",
+  noToolsetsFound: "Nenhuma ferramenta encontrada.",
   addManuallyHint:
-    "Você também pode adicionar memórias manualmente usando o botão acima.",
+    "Você também pode adicionar memórias na mão pelo botão acima.",
   userProfileHint:
-    "Conte ao Hermes sobre você — nome, cargo, preferências, estilo de comunicação.",
+    "Conte ao agente sobre você — nome, cargo, preferências e o seu jeito de se comunicar.",
   providersHint:
-    "Provedores de memória plugáveis dão ao Hermes uma memória de longo prazo avançada. A memória integrada (acima) está sempre ativa ao lado do provedor selecionado.",
+    "Os provedores de memória dão ao agente uma memória de longo prazo mais avançada. A memória interna (acima) fica sempre ligada, junto com o provedor que você escolher.",
   providersHintActive: "Ativo: <strong>{{provider}}</strong>",
   providersHintInactive:
-    "Nenhum provedor externo ativo — usando apenas a integrada.",
+    "Nenhum provedor externo ativo — usando só a memória interna.",
   enterEnvKey: "Digite {{key}}",
   chars: "{{count}} caracteres",
   cancel: "Cancelar",
@@ -39,25 +40,25 @@ export default {
   deleteConfirm: "Excluir?",
   yes: "Sim",
   no: "Não",
-  saveProfile: "Salvar Perfil",
+  saveProfile: "Salvar perfil",
   active: "Ativo",
   deactivate: "Desativar",
   activating: "Ativando...",
   activate: "Ativar",
   providers: {
     honcho:
-      "Modelagem de usuário entre sessões nativa de IA com Q&A dialético e busca semântica",
+      "Aprende seu perfil entre conversas, com perguntas e respostas guiadas e busca por significado",
     hindsight:
-      "Memória de longo prazo com grafo de conhecimento e recuperação multi-estratégia",
-    mem0: "Extração de fatos por LLM no lado do servidor com busca semântica e auto-deduplicação",
-    retaindb: "API de memória em nuvem com busca híbrida e 7 tipos de memória",
+      "Memória de longo prazo que conecta o conhecimento em rede e busca por várias estratégias",
+    mem0: "Extrai fatos no servidor usando IA, com busca por significado e sem repetições",
+    retaindb: "Memória na nuvem com busca combinada e 7 tipos de memória",
     supermemory:
-      "Memória semântica de longo prazo com recuperação de perfil e extração de entidades",
+      "Memória de longo prazo por significado, que lembra seu perfil e reconhece pessoas e coisas citadas",
     holographic:
-      "Armazenamento local de fatos em SQLite com busca FTS5 e pontuação de confiança (sem necessidade de chave de API)",
+      "Guarda fatos no seu computador (SQLite) com busca FTS5 e grau de confiança (não precisa de chave de API)",
     openviking:
-      "Memória gerenciada por sessão com recuperação em camadas e navegação de conhecimento",
+      "Memória organizada por conversa, com recuperação em camadas e navegação pelo conhecimento",
     byterover:
-      "Árvore de conhecimento persistente com recuperação em camadas via CLI brv",
+      "Árvore de conhecimento que se mantém ao longo do tempo, com recuperação em camadas pela CLI brv",
   },
 } as const;

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 /* ========================================================================
    SI Agent — Empresarial 360 "Centurion" Design System
-   Fonte Google Fonts (carregada via CSP-allow connect-src ajustado no main)
+   Fontes do DS auto-hospedadas localmente via @fontsource (importadas em
+   main.tsx) — sem CDN do Google Fonts; a CSP estrita permanece intacta.
    ======================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap');
 
 /* ── SI Agent Empresarial 360 — tokens canônicos (:root = dark) ────────── */
 :root {
@@ -1409,13 +1409,7 @@ body {
 .sidebar-logo {
   height: 30px;
   width: 150px;
-  background-color: var(--primary-yellow);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
+  object-fit: contain;
 }
 
 .sidebar-collapse-toggle {
@@ -2590,8 +2584,8 @@ body {
 }
 
 .chat-empty-icon {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background: var(--bg-elevated);
   display: flex;
@@ -2601,7 +2595,9 @@ body {
 }
 
 .chat-empty-icon img {
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .chat-empty-text {

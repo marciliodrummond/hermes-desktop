@@ -1,11 +1,11 @@
 export default {
-  title: "Persona",
+  title: "Personalidade",
   subtitle:
-    "Defina a personalidade, o tom e as instruções do seu agente via SOUL.md",
-  resetTitle: "Redefinir para o padrão",
-  reset: "Redefinir",
+    "Defina o jeito, o tom e as instruções do seu agente no arquivo SOUL.md",
+  resetTitle: "Voltar ao padrão",
+  reset: "Restaurar",
   resetConfirm:
-    "Redefinir para a persona padrão? Seu conteúdo atual será perdido.",
-  placeholder: "Escreva as instruções da persona do seu agente aqui...",
-  hint: "Este arquivo é carregado novamente a cada conversa. Use-o para definir a personalidade do seu agente, o estilo de comunicação e quaisquer instruções permanentes.",
+    "Voltar à personalidade padrão? Você vai perder o que escreveu aqui.",
+  placeholder: "Escreva aqui como você quer que o seu agente se comporte...",
+  hint: "Este texto é lido no começo de cada conversa. Use-o para definir o jeito do seu agente, como ele se comunica e instruções que valem sempre.",
 } as const;
