@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "schema": "1.0.0",
+    "brand": "SI Agent",
+    "upstream": "fathah/hermes-desktop",
+    "fork": "marciliodrummond/hermes-desktop",
+    "created": "2026-06-10",
+    "onda": "1"
+  },
+  "brand": {
+    "productName": {
+      "from": "Hermes One",
+      "to": "SI Agent",
+      "verify": "grep -r 'productName' electron-builder.yml | grep 'SI Agent'"
+    },
+    "appId": {
+      "from": "com.nousresearch.hermes",
+      "to": "org.superinteligencia.agent",
+      "verify": "grep 'org.superinteligencia.agent' electron-builder.yml"
+    },
+    "author": {
+      "from": "fathah",
+      "to": "Super Inteligencia"
+    },
+    "homepage": {
+      "from": "https://github.com/fathah/hermes-desktop",
+      "to": "https://github.com/marciliodrummond/hermes-desktop"
+    },
+    "windowTitle": {
+      "file": "src/renderer/index.html",
+      "anchor": "<title>",
+      "from": "Hermes One",
+      "to": "SI Agent"
+    },
+    "appName_setName": {
+      "file": "src/main/index.ts",
+      "anchor": "app.setName(",
+      "from": "Hermes One",
+      "to": "SI Agent"
+    },
+    "notification_titles": {
+      "files": ["src/main/index.ts"],
+      "from": ["Hermes One", "Hermes One — Error"],
+      "to": ["SI Agent", "SI Agent — Error"]
+    },
+    "i18n_appName": {
+      "files": "src/shared/i18n/locales/*/common.ts",
+      "anchor": "appName:",
+      "from": "Hermes One",
+      "to": "SI Agent"
+    },
+    "version_command": {
+      "file": "src/renderer/src/screens/Chat/hooks/useLocalCommands.ts",
+      "from": "Hermes One:",
+      "to": "SI Agent:"
+    },
+    "CAUTION_preserve": [
+      "Hermes Agent (CLI/binario)",
+      "~/.hermes paths",
+      "hermes-agent executable",
+      "hermes.ts / hermes-auth.ts internals"
+    ]
+  },
+  "assets": [
+    {
+      "dest": "build/icon.png",
+      "source": "src/renderer/src/assets/brand/si-icon.png",
+      "kind": "app_icon_512",
+      "note": "Gerado pelo apply.ts via .NET System.Drawing (512x512)"
+    },
+    {
+      "dest": "build/icon.ico",
+      "source": "src/renderer/src/assets/brand/si-icon.png",
+      "kind": "app_icon_ico",
+      "note": "Multi-size ICO: 16/32/48/64/128/256px"
+    },
+    {
+      "dest": "src/renderer/src/assets/brand/si-icon.png",
+      "source": "Downloads/SI Agent/Logo SI Agent - favicon.png",
+      "kind": "brand_icon_square"
+    },
+    {
+      "dest": "src/renderer/src/assets/brand/si-logo-dark.png",
+      "source": "Downloads/SI Agent/Logo SI Agent - horizontal - fundo transparente.png",
+      "kind": "brand_logo_dark"
+    },
+    {
+      "dest": "src/renderer/src/assets/brand/si-logo-light.png",
+      "source": "Downloads/SI Agent/Logo SI Agent - horizontal - fundo branco.png",
+      "kind": "brand_logo_light"
+    }
+  ],
+  "logo_usage": {
+    "sidebar": {
+      "file": "src/renderer/src/screens/Layout/Layout.tsx",
+      "dark_themes": "si-logo-dark.png",
+      "light_themes": "si-logo-light.png",
+      "note": "Trocado de mask SVG para <img> com condicional por resolvedTheme"
+    },
+    "splash": {
+      "file": "src/renderer/src/screens/SplashScreen/SplashScreen.tsx",
+      "logo": "si-logo-dark.png",
+      "note": "Splash usa dark sobre fundo escuro/video"
+    },
+    "app_icon_small": {
+      "file": "src/renderer/src/components/common/HermesLogo.tsx",
+      "logo": "si-icon.png"
+    }
+  },
+  "design_system": {
+    "source": "DESIGN.md",
+    "css_wiring": {
+      "file": "src/renderer/src/assets/main.css",
+      "injection": "bloco :root + .theme-document + @import Google Fonts (Archivo/Inter/Source Serif 4/JetBrains Mono) no topo apos @import tailwindcss",
+      "themes_added": ["si-dark", "si-light"]
+    },
+    "design_md": "DESIGN.md (raiz do fork)",
+    "claude_md": "CLAUDE.md (regra: siga DESIGN.md para decisoes visuais)"
+  },
+  "dark_light_toggle": {
+    "system": "ThemeProvider.tsx (existente, persistido em localStorage)",
+    "default_dark": "si-dark",
+    "default_light": "si-light",
+    "file": "src/renderer/src/constants.ts",
+    "anchor": "DEFAULT_DARK_THEME / DEFAULT_LIGHT_THEME",
+    "themes_registry": "THEMES array em constants.ts (si-dark e si-light adicionados no topo)"
+  },
+  "locale": {
+    "file": "src/shared/i18n/config.ts",
+    "anchor": "DEFAULT_ACTIVE_LOCALE / FALLBACK_LOCALE",
+    "from": "en",
+    "to": "pt-BR",
+    "note": "SOURCE_LOCALE mantido como 'en' (base de traducoes); pt-BR e o default do app"
+  },
+  "telemetry": {
+    "policy": "disabled",
+    "file": "src/renderer/src/utils/analytics.ts",
+    "action": "Substituido por stub completo — todas as funcoes sao no-op; posthog.init nunca e chamado",
+    "verify": "grep -r 'posthog.init' src/renderer/src/utils/analytics.ts devera retornar vazio"
+  },
+  "update_feed": {
+    "file": "electron-builder.yml",
+    "anchor": "publish.owner",
+    "from": "fathah",
+    "to": "marciliodrummond",
+    "verify": "grep 'marciliodrummond' electron-builder.yml"
+  },
+  "idempotency_notes": [
+    "Todas as edicoes sao verificadas pelo anchor 'from' antes de aplicar",
+    "Se o valor ja e 'to', apply.ts faz no-op silencioso",
+    "Assets sao copiados somente se o destino nao existir ou for diferente (por hash)"
+  ]
+}

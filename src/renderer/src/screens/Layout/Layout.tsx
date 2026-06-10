@@ -20,7 +20,8 @@ import Schedules from "../Schedules/Schedules";
 import Kanban from "../Kanban/Kanban";
 import RemoteNotice from "../../components/RemoteNotice";
 import VerifyWarningBanner from "../../components/VerifyWarningBanner";
-import hermeslogo from "../../assets/hermes-one.svg";
+import siLogoDark from "../../assets/brand/si-logo-dark.png";
+import siLogoLight from "../../assets/brand/si-logo-light.png";
 import {
   ChatBubble,
   Clock,
@@ -40,6 +41,8 @@ import {
 } from "../../assets/icons";
 import type { LucideIcon } from "lucide-react";
 import { useI18n } from "../../components/useI18n";
+import { useTheme } from "../../components/ThemeProvider";
+import { THEMES } from "../../constants";
 
 type View =
   | "chat"
@@ -90,6 +93,12 @@ function Layout({
   onDismissVerifyWarning,
 }: LayoutProps = {}): React.JSX.Element {
   const { t } = useI18n();
+  const { resolved: resolvedTheme } = useTheme();
+  // Pick the brand logo by the active theme's appearance (not by enumerating
+  // theme ids), so every current/future light theme — including the default
+  // si-light — gets the light-background logo automatically.
+  const isLightTheme =
+    THEMES.find((th) => th.id === resolvedTheme)?.appearance === "light";
   const [view, setView] = useState<View>("chat");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState<string | null>(null);
@@ -286,14 +295,11 @@ function Layout({
     <div className={`layout ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
       <aside className="sidebar">
         <div className="sidebar-brand">
-          <span
+          <img
             className="sidebar-logo"
-            role="img"
-            aria-label="Hermes"
-            style={{
-              maskImage: `url(${hermeslogo})`,
-              WebkitMaskImage: `url(${hermeslogo})`,
-            }}
+            src={isLightTheme ? siLogoLight : siLogoDark}
+            alt="SI Agent"
+            style={{ height: 30, width: 150, objectFit: "contain" }}
           />
           <button
             className="sidebar-collapse-toggle"

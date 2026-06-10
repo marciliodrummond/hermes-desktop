@@ -1,7 +1,137 @@
 @import "tailwindcss";
+/* ========================================================================
+   SI Agent — Empresarial 360 "Centurion" Design System
+   Fonte Google Fonts (carregada via CSP-allow connect-src ajustado no main)
+   ======================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap');
+
+/* ── SI Agent Empresarial 360 — tokens canônicos (:root = dark) ────────── */
+:root {
+  /* superfícies */
+  --background: #030409;
+  --foreground: #F4F5F6;
+  --card: #121419;
+  --card-foreground: #F4F5F6;
+  --popover: #1A1D22;
+  --popover-foreground: #F4F5F6;
+  /* metais */
+  --primary: #E2C074;
+  --primary-foreground: #030409;
+  --secondary: #C2C7CE;
+  --secondary-foreground: #05070B;
+  --muted: #1A1D22;
+  --muted-foreground: #A7ABB2;
+  --accent: #282A32;
+  --accent-foreground: #F4F5F6;
+  --destructive: #C77B72;
+  --destructive-foreground: #1A0606;
+  /* estrutura */
+  --border: #2B2E34;
+  --input: #2B2E34;
+  --ring: #D4D8DD;
+  --radius: 0.375rem;
+  /* tipografia */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Archivo", "Inter", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* extras de marca */
+  --gold-70: #ECD49A; --gold-50: #C9A24F; --gold-veil: #3A2F18;
+  --platinum-90: #E9ECEF; --platinum-50: #9AA0A8; --platinum-30: #6B7178; --platinum-veil: #1A1D22;
+  --success: #7FB08A; --warning: #D8B25A;
+  --link: #C2C7CE; --overlay: rgb(3 4 9 / 0.72);
+}
+
+/* Tema claro de documento (use .theme-document em wrappers de peça/contrato) */
+.theme-document {
+  --background: #F4F2EC;
+  --foreground: #16181D;
+  --card: #FFFFFF;
+  --card-foreground: #16181D;
+  --muted: #ECEAE2;
+  --muted-foreground: #5C5F66;
+  --border: #D8D4C8;
+  --input: #D8D4C8;
+  --ring: #6B7178;
+  --primary: #E2C074;
+  --primary-foreground: #030409;
+}
 
 /* ========================================================================
-   Hermes One Desktop — Clean Design System
+   SI Agent — tema "si-dark" (canônico) e "si-light" (brand-safe)
+   Integrados ao sistema de temas existente via data-theme
+   ======================================================================== */
+[data-theme="si-dark"] {
+  --bg-primary: #030409;
+  --bg-secondary: #0A0C10;
+  --bg-tertiary: #121419;
+  --bg-elevated: #1A1D22;
+  --bg-hover: #282A32;
+  --bg-active: #2B2E34;
+  --accent: #282A32;
+  --accent-hover: #2B2E34;
+  --accent-subtle: rgba(194, 199, 206, 0.10);
+  --accent-text: #C2C7CE;
+  --primary-yellow: #E2C074;
+  --text-primary: #F4F5F6;
+  --text-secondary: #A7ABB2;
+  --text-muted: #787C84;
+  --border: #2B2E34;
+  --border-bright: #3A3E45;
+  --border-focus: #D4D8DD;
+  --success: #7FB08A;
+  --success-bg: rgba(127, 176, 138, 0.10);
+  --error: #C77B72;
+  --error-bg: rgba(199, 123, 114, 0.10);
+  --warning: #D8B25A;
+  --warning-bg: rgba(216, 178, 90, 0.10);
+  --user-bubble: #282A32;
+  --user-bubble-text: #E2C074;
+  --agent-bubble: #121419;
+  --agent-bubble-text: #F4F5F6;
+  --code-bg: #0A0C10;
+  --scrollbar-thumb: #2B2E34;
+  --scrollbar-hover: #3A3E45;
+  --selection: rgba(194, 199, 206, 0.20);
+}
+
+/* SI Light — app inteiro brand-safe (derivado do tema-documento do DS) */
+[data-theme="si-light"] {
+  --bg-primary: #F4F2EC;
+  --bg-secondary: #ECEAE2;
+  --bg-tertiary: #E4E2DA;
+  --bg-elevated: #DDDBD3;
+  --bg-hover: #D5D3CB;
+  --bg-active: #CCCAC2;
+  --accent: #7A5F2A;
+  --accent-hover: #8A6F3A;
+  --accent-subtle: rgba(122, 95, 42, 0.10);
+  --accent-text: #7A5F2A;
+  --primary-yellow: #7A5F2A;
+  --text-primary: #16181D;
+  --text-secondary: #5C5F66;
+  --text-muted: #6B7178;
+  --border: #D8D4C8;
+  --border-bright: #C5C1B5;
+  --border-focus: #7A5F2A;
+  --success: #4A8A5A;
+  --success-bg: rgba(74, 138, 90, 0.08);
+  --error: #B86A61;
+  --error-bg: rgba(184, 106, 97, 0.08);
+  --warning: #9A7830;
+  --warning-bg: rgba(154, 120, 48, 0.08);
+  --user-bubble: #7A5F2A;
+  --user-bubble-text: #F4F2EC;
+  --agent-bubble: #ECEAE2;
+  --agent-bubble-text: #16181D;
+  --code-bg: #E4E2DA;
+  --scrollbar-thumb: #C5C1B5;
+  --scrollbar-hover: #B5B1A5;
+  --selection: rgba(122, 95, 42, 0.20);
+}
+
+/* ========================================================================
+   SI Agent Desktop — Sistema Visual Upstream (mantido para compatibilidade)
    Dark + Light mode, no gradients, flat design
    ======================================================================== */
 

@@ -1,129 +1,45 @@
-import posthog from "posthog-js";
-
-const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || "";
-const POSTHOG_HOST =
-  import.meta.env.VITE_POSTHOG_HOST || "https://eu.i.posthog.com";
-
-const ANALYTICS_CONSENT_KEY = "hermes-analytics-enabled";
-
-function isAnalyticsEnabled(): boolean {
-  // Default to true for official builds (key present), false otherwise
-  const hasKey = POSTHOG_KEY.length > 0;
-  try {
-    const stored = localStorage.getItem(ANALYTICS_CONSENT_KEY);
-    if (stored === null) return hasKey; // First run: enabled if key exists
-    return stored === "true";
-  } catch {
-    return false;
-  }
-}
-
-function getOrCreateAnonymousId(): string {
-  const key = "hermes-anonymous-id";
-  try {
-    let id = localStorage.getItem(key);
-    if (!id) {
-      id = crypto.randomUUID();
-      localStorage.setItem(key, id);
-    }
-    return id;
-  } catch {
-    return "unknown";
-  }
-}
-
-let initialized = false;
+/**
+ * Analytics — SI Agent white-label overlay
+ * PostHog is fully neutralized: init never runs, no events are sent to
+ * third parties. All exported functions are no-ops retained for API
+ * compatibility with callers that have not been refactored yet.
+ *
+ * Original upstream code imported posthog-js and conditionally initialised
+ * it when VITE_POSTHOG_KEY was present. For the SI Agent build the key is
+ * never set, and this stub ensures the import of posthog-js itself is
+ * also dead-code eliminated by Vite.
+ */
 
 export function initAnalytics(): void {
-  if (initialized) return;
-  if (!POSTHOG_KEY) {
-    // No key configured — silently skip analytics
-    initialized = true;
-    return;
-  }
-  if (!isAnalyticsEnabled()) {
-    initialized = true;
-    return;
-  }
-
-  posthog.init(POSTHOG_KEY, {
-    api_host: POSTHOG_HOST,
-    capture_pageview: false, // We handle manually for SPA
-    capture_pageleave: false,
-    disable_session_recording: true, // Privacy-first: no session recording
-    persistence: "localStorage",
-    // Privacy hardening:
-    //  - respect_dnt: honour the user's "Do Not Track" preference if set.
-    //  - mask_personal_data_properties: auto-mask common PII patterns
-    //    (emails, names) from any properties we ever pass to capture().
-    // Note: full IP-address suppression is NOT possible from the client —
-    // PostHog's deprecated `ip: false` option is a no-op. IP capture must
-    // be disabled server-side in the PostHog project settings
-    // ("Discard IP data"). See:
-    // https://posthog.com/tutorials/web-redact-properties#hiding-customer-ip-address
-    respect_dnt: true,
-    mask_personal_data_properties: true,
-    loaded: () => {
-      posthog.identify(getOrCreateAnonymousId(), {
-        app_version: window.electron?.process?.versions?.electron || "unknown",
-        platform: window.electron?.process?.platform || "unknown",
-        node_version: window.electron?.process?.versions?.node || "unknown",
-      });
-    },
-  });
-
-  initialized = true;
+  // No-op: PostHog disabled in SI Agent.
 }
 
 export function capture(
-  event: string,
-  properties?: Record<string, unknown>,
+  _event: string,
+  _properties?: Record<string, unknown>,
 ): void {
-  if (!initialized || !isAnalyticsEnabled()) return;
-  try {
-    posthog.capture(event, properties);
-  } catch {
-    // Silently fail — analytics should never break the app
-  }
+  // No-op: PostHog disabled.
 }
 
-export function captureScreenView(screen: string): void {
-  capture("screen_view", { screen });
+export function captureScreenView(_screen: string): void {
+  // No-op: PostHog disabled.
 }
 
 export function captureFeatureUsage(
-  feature: string,
-  details?: Record<string, unknown>,
+  _feature: string,
+  _details?: Record<string, unknown>,
 ): void {
-  capture("feature_used", { feature, ...details });
+  // No-op: PostHog disabled.
 }
 
 export function getAnalyticsConsent(): boolean {
-  return isAnalyticsEnabled();
+  return false;
 }
 
-export function setAnalyticsConsent(enabled: boolean): void {
-  try {
-    localStorage.setItem(ANALYTICS_CONSENT_KEY, String(enabled));
-  } catch {
-    // ignore
-  }
-
-  if (enabled && POSTHOG_KEY && !initialized) {
-    initAnalytics();
-  } else if (!enabled && initialized) {
-    try {
-      posthog.opt_out_capturing();
-    } catch {
-      // ignore
-    }
-  }
+export function setAnalyticsConsent(_enabled: boolean): void {
+  // No-op: PostHog disabled.
 }
 
 export function resetAnalytics(): void {
-  try {
-    posthog.reset();
-  } catch {
-    // ignore
-  }
+  // No-op: PostHog disabled.
 }

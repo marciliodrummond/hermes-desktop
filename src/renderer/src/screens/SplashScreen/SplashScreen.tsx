@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import startVid from "../../assets/startvid.mp4";
-import splashLogo from "../../assets/hermes-one.svg";
+import splashLogo from "../../assets/brand/si-logo-dark.png";
 
 interface SplashScreenProps {
   onFinished: () => void;
@@ -39,7 +39,7 @@ function SplashScreen({
         preload="auto"
         style={{ display: "block", objectFit: "cover" }}
       />
-      <img className="splash-logo" src={splashLogo} alt="Hermes One" />
+      <img className="splash-logo" src={splashLogo} alt="SI Agent" />
       {status && <div className="splash-status">{status}</div>}
     </div>
   );

@@ -1,5 +1,5 @@
-appId: com.nousresearch.hermes
-productName: Hermes One
+appId: org.superinteligencia.agent
+productName: SI Agent
 directories:
   buildResources: build
 files:
@@ -47,12 +47,12 @@ linux:
     - snap
     - deb
     - rpm
-  maintainer: electronjs.org
-  vendor: Nous Research
+  maintainer: Super Inteligencia
+  vendor: Super Inteligencia
   category: Utility
   synopsis: Self-improving AI assistant desktop app
   description: >-
-    Hermes One is a native desktop app for installing, configuring, and chatting
+    SI Agent is a native desktop app for installing, configuring, and chatting
     with Hermes Agent — a self-improving AI assistant with tool use, multi-platform
     messaging, and a closed learning loop.
 appImage:
@@ -69,5 +69,5 @@ rpm:
 npmRebuild: false
 publish:
   provider: github
-  owner: fathah
+  owner: marciliodrummond
   repo: hermes-desktop

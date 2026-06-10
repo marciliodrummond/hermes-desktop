@@ -37,3 +37,6 @@ release/
 # Local launcher scripts (user-specific, do not commit)
 /*.bat
 /*.ps1
+
+# SI Agent orchestration state (internal planning, never publish)
+.nirvana/

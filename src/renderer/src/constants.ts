@@ -402,6 +402,8 @@ export interface ThemeDef {
  * entry here and define its CSS variables there — nothing else is required.
  */
 export const THEMES: ThemeDef[] = [
+  { id: "si-dark", name: "SI Agent (Escuro)", appearance: "dark" },
+  { id: "si-light", name: "SI Agent (Claro)", appearance: "light" },
   { id: "dark", name: "Dark", appearance: "dark" },
   { id: "light", name: "Light", appearance: "light" },
   { id: "dracula", name: "Dracula", appearance: "dark" },
@@ -427,8 +429,8 @@ export const THEME_OPTIONS = [
 ];
 
 /** Themes used by the "System" setting when following the OS preference. */
-export const DEFAULT_DARK_THEME = "dark";
-export const DEFAULT_LIGHT_THEME = "light";
+export const DEFAULT_DARK_THEME = "si-dark";
+export const DEFAULT_LIGHT_THEME = "si-light";
 
 export const THEME_STORAGE_KEY = "hermes-theme";
 

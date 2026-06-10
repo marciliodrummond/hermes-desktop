@@ -1,5 +1,5 @@
-export default {
-  appName: "Hermes One",
+﻿export default {
+  appName: "SI Agent",
   continue: "Devam",
   cancel: "İptal",
   retry: "Tekrar Dene",
