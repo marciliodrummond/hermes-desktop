@@ -2,7 +2,7 @@ import { Suspense, memo, useMemo } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import woodenTableGlbUrl from "../assets/wooden_table.glb?url";
-import hermesHqLogoUrl from "../assets/images/hermes-one-hq.webp";
+import siHqLogoUrl from "../../../../assets/brand/si-icon.png";
 import { WORLD_W, WORLD_H, SCALE } from "../core/constants";
 import { toWorld } from "../core/geometry";
 import { glbClone, normalizeFootprint } from "../core/glb";
@@ -69,14 +69,14 @@ function NorthWall({ palette }: { palette: WorldPalette }): React.JSX.Element {
   );
 }
 
-/** HERMES HQ logo decal on the office's south wall. */
+/** SI Agent logo decal on the office's south wall. */
 function OfficeLogo(): React.JSX.Element {
-  const texture = useTexture(hermesHqLogoUrl, (t) => {
+  const texture = useTexture(siHqLogoUrl, (t) => {
     t.colorSpace = THREE.SRGBColorSpace;
   });
-  // Logo aspect ratio ≈ 4.3 : 1
-  const logoW = 8.0;
-  const logoH = logoW / 4.3;
+  // SI emblem — square (1:1)
+  const logoW = 3.0;
+  const logoH = logoW;
   const halfH = WORLD_H / 2;
   const wallT = 0.2;
   const z = halfH + wallT / 2 + 0.01;
