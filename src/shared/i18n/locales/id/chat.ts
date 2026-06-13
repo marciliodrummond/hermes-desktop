@@ -78,7 +78,7 @@ export default {
     model: "Tampilkan atau ganti model saat ini",
     memory: "Tampilkan memori agent",
     persona: "Tampilkan persona saat ini",
-    version: "Tampilkan versi Hermes",
+    version: "Tampilkan versi SI Agent",
   },
   worktree: {
     loading: "Memuat",

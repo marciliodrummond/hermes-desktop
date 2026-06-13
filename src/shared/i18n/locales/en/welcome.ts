@@ -1,5 +1,5 @@
 export default {
-  title: "Welcome to Hermes",
+  title: "Welcome to SI Agent",
   subtitle:
     "Your self-improving AI assistant that runs locally on your machine. Private, powerful, and always learning.",
   installIssueTitle: "Installation Issue",
@@ -11,9 +11,9 @@ export default {
   installSizeHint: "This will install required components (~2 GB)",
   copyInstallCommand: "Copy install command",
   dividerOr: "or",
-  connectRemote: "Connect to Remote Hermes",
-  connectRemoteTitle: "Connect to Remote Hermes",
-  connectRemoteSubtitle: "Enter the URL of a running Hermes API server.",
+  connectRemote: "Connect to Remote SI Agent",
+  connectRemoteTitle: "Connect to Remote SI Agent",
+  connectRemoteSubtitle: "Enter the URL of a running SI Agent API server.",
   remoteServerUrl: "Server URL",
   remoteApiKey: "API Key (optional)",
   remoteApiKeyPlaceholder: "Bearer token (API_SERVER_KEY)",

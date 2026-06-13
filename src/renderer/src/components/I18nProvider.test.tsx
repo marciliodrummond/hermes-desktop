@@ -57,7 +57,7 @@ describe("I18nProvider", () => {
     }
   });
 
-  it("renders English translations by default", async () => {
+  it("renders default (pt-BR) translations", async () => {
     await act(async () => {
       render(
         <I18nProvider>
@@ -66,7 +66,7 @@ describe("I18nProvider", () => {
       );
     });
 
-    expect(await screen.findByText("Welcome to Hermes")).toBeInTheDocument();
+    expect(await screen.findByText("Bem-vindo ao SI Agent")).toBeInTheDocument();
   });
 
   it("renders Spanish translations after switching locale", async () => {
@@ -83,7 +83,7 @@ describe("I18nProvider", () => {
     });
 
     expect(setLocale).toHaveBeenLastCalledWith("es");
-    expect(await screen.findByText("Bienvenido a Hermes")).toBeInTheDocument();
+    expect(await screen.findByText("Bienvenido a SI Agent")).toBeInTheDocument();
   });
 
   it("does not overwrite the main-process locale with the startup fallback", async () => {
@@ -109,6 +109,6 @@ describe("I18nProvider", () => {
     });
 
     expect(setLocale).toHaveBeenLastCalledWith("es");
-    expect(await screen.findByText("Bienvenido a Hermes")).toBeInTheDocument();
+    expect(await screen.findByText("Bienvenido a SI Agent")).toBeInTheDocument();
   });
 });

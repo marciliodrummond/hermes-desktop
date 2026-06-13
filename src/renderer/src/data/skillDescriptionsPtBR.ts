@@ -29,7 +29,7 @@ const skillDescriptionsPtBR: Record<string, string> = {
   "github-repo-management": "Clona, cria e faz fork de repositórios; gerencia remotos e releases.",
   "google-workspace": "Acessa Gmail, Calendar, Drive, Docs e Sheets do Google.",
   "heartmula": "Gera músicas a partir de letras e marcações com o HeartMuLa (parecido com o Suno).",
-  "hermes-agent": "Configura, estende ou contribui para o Hermes Agent.",
+  "hermes-agent": "Configura, estende ou contribui para o SI Agent.",
   "hermes-agent-skill-authoring": "Ajuda a criar skills (SKILL.md) no repositório, cuidando de frontmatter, estrutura e validação.",
   "himalaya": "Envia e recebe e-mails pelo terminal usando IMAP/SMTP com a CLI Himalaya.",
   "huggingface-hub": "Busca, baixa e envia modelos e datasets do HuggingFace pela CLI hf.",

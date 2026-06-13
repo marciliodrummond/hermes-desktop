@@ -18,7 +18,7 @@ export function buildChatTranscript(
     .filter((m) => "content" in m && typeof m.content === "string")
     .map((m) => {
       const msg = m as { role: "user" | "agent"; content: string };
-      const speaker = msg.role === "user" ? "You" : "Hermes";
+      const speaker = msg.role === "user" ? "You" : "SI Agent";
       const content = msg.content.trim();
       return format === "markdown"
         ? `**${speaker}:**\n\n${content}`

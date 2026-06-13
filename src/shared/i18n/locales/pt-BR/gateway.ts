@@ -14,9 +14,9 @@ export default {
   startExited: "As Conexões iniciaram, mas pararam antes de ficar prontas.",
   checkLog: "Veja o registro de erros das Conexões:",
   gatewayHint:
-    "Conecta o Hermes ao Telegram, Discord, Slack e outros apps de mensagem",
+    "Conecta o SI Agent ao Telegram, Discord, Slack e outros apps de mensagem",
   subtitle:
-    "Gerencie os apps de mensagem que o Hermes Agent pode usar.",
+    "Gerencie os apps de mensagem que o SI Agent pode usar.",
   refreshTooltip: "Atualizar o status das plataformas",
   refresh: "Atualizar",
   configHint:

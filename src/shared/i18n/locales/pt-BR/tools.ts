@@ -94,7 +94,7 @@ export default {
   mcpNoResults: "Nenhum servidor MCP corresponde ao filtro.",
   mcpEmptyTitle: "Nenhum servidor MCP configurado",
   mcpEmptyDescription:
-    "Adicione um servidor HTTP ou stdio personalizado, ou instale um pelo catálogo MCP do Hermes.",
+    "Adicione um servidor HTTP ou stdio personalizado, ou instale um pelo catálogo MCP do SI Agent.",
   mcpLoadFailed: "Não foi possível carregar os servidores MCP.",
   mcpAddFailed: "Não foi possível adicionar o servidor MCP.",
   mcpRemoveFailed: "Não foi possível remover o servidor MCP.",

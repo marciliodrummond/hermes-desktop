@@ -15,8 +15,8 @@ export default {
     "Gateway was started, but it stopped again before it became ready.",
   checkLog: "Check the gateway log:",
   gatewayHint:
-    "Connects Hermes to Telegram, Discord, Slack, and other platforms",
-  subtitle: "Manage the messaging platforms Hermes Agent can connect to.",
+    "Connects SI Agent to Telegram, Discord, Slack, and other platforms",
+  subtitle: "Manage the messaging platforms SI Agent can connect to.",
   refreshTooltip: "Refresh platform status",
   refresh: "Refresh",
   configHint:

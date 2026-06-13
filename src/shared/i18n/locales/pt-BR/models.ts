@@ -25,7 +25,7 @@ export default {
     "Necessário apenas para provedores próprios ou que rodam no seu computador",
   apiKeyLabel: "Chave da API",
   apiKeyHint:
-    "Salva como variável de ambiente. O Hermes escolhe a chave certa pela URL ou usa a CUSTOM_API_KEY se não encontrar.",
+    "Salva como variável de ambiente. O SI Agent escolhe a chave certa pela URL ou usa a CUSTOM_API_KEY se não encontrar.",
   allProviders: "Todos",
   browseRegistry: "Explorar modelos",
   registryTitle: "Catálogo de modelos",

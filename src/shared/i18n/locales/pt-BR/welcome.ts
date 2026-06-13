@@ -1,5 +1,5 @@
 export default {
-  title: "Bem-vindo ao Hermes",
+  title: "Bem-vindo ao SI Agent",
   subtitle:
     "Seu assistente de IA que aprende sozinho e funciona direto no seu computador. Privado, potente e sempre evoluindo.",
   installIssueTitle: "Algo deu errado na instalação",
@@ -11,10 +11,10 @@ export default {
   installSizeHint: "Vamos baixar o necessário para funcionar (cerca de 2 GB)",
   copyInstallCommand: "Copiar comando de instalação",
   dividerOr: "ou",
-  connectRemote: "Conectar a um Hermes em outro computador",
-  connectRemoteTitle: "Conectar a um Hermes em outro computador",
+  connectRemote: "Conectar a um SI Agent em outro computador",
+  connectRemoteTitle: "Conectar a um SI Agent em outro computador",
   connectRemoteSubtitle:
-    "Digite o endereço (URL) de um Hermes já em funcionamento em outro lugar.",
+    "Digite o endereço (URL) de um SI Agent já em funcionamento em outro lugar.",
   remoteServerUrl: "Endereço (URL) do servidor",
   remoteApiKey: "Chave da API (opcional)",
   remoteApiKeyPlaceholder: "Token Bearer (API_SERVER_KEY)",

@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { t } from "./index";
 
 describe("shared i18n", () => {
-  it("returns English text by default", () => {
-    expect(t("welcome.title")).toBe("Welcome to Hermes");
+  it("returns the default-locale (pt-BR) text", () => {
+    expect(t("welcome.title")).toBe("Bem-vindo ao SI Agent");
   });
 
   it("falls back to the key when an English key is missing", () => {
@@ -11,23 +11,23 @@ describe("shared i18n", () => {
   });
 
   it("returns zh-CN text when available", () => {
-    expect(t("welcome.title", "zh-CN")).toBe("欢迎使用 Hermes");
+    expect(t("welcome.title", "zh-CN")).toBe("欢迎使用 SI Agent");
   });
 
   it("returns zh-TW text when available", () => {
-    expect(t("welcome.title", "zh-TW")).toBe("歡迎使用 Hermes");
+    expect(t("welcome.title", "zh-TW")).toBe("歡迎使用 SI Agent");
   });
 
   it("returns es text when available", () => {
-    expect(t("welcome.title", "es")).toBe("Bienvenido a Hermes");
+    expect(t("welcome.title", "es")).toBe("Bienvenido a SI Agent");
   });
 
   it("returns id text when available", () => {
-    expect(t("welcome.title", "id")).toBe("Selamat datang di Hermes");
+    expect(t("welcome.title", "id")).toBe("Selamat datang di SI Agent");
   });
 
   it("returns pl text when available", () => {
-    expect(t("welcome.title", "pl")).toBe("Witamy w Hermes");
+    expect(t("welcome.title", "pl")).toBe("Witamy w SI Agent");
   });
 
   it("falls back to en when zh-CN key is missing", () => {

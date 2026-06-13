@@ -18,7 +18,7 @@ export default {
   apiKeyModal: {
     title: "Definir a chave do servidor de API",
     description:
-      "A API_SERVER_KEY é necessária para as Conexões do Hermes liberarem as solicitações. Defina agora para a conversa funcionar.",
+      "A API_SERVER_KEY é necessária para as Conexões do SI Agent liberarem as solicitações. Defina agora para a conversa funcionar.",
     label: "Chave do servidor de API",
     placeholder: "sk-… ou qualquer senha",
     autoGenerate: "Gerar automaticamente",

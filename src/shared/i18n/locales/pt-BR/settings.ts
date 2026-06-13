@@ -1,7 +1,7 @@
 export default {
   title: "Configurações",
   sections: {
-    hermesAgent: "Hermes Agent",
+    hermesAgent: "SI Agent",
     appearance: "Aparência",
     privacy: "Privacidade",
     credentialPool: "Pool de Credenciais",
@@ -50,7 +50,7 @@ export default {
   },
   notDetected: "Não detectado",
   updatedSuccessfully: "Tudo certo, atualizado!",
-  updateSuccess: "Hermes atualizado com sucesso.",
+  updateSuccess: "SI Agent atualizado com sucesso.",
   updateFailed: "Não foi possível atualizar.",
   version: "v{{version}}",
   proxyPlaceholder: "ex: socks5://127.0.0.1:1080 ou http://proxy:8080",
@@ -80,14 +80,14 @@ export default {
     "Não conseguimos buscar a lista de modelos do provedor — mas você ainda pode digitar o nome do modelo",
   customBaseUrlHint: "Endereço (endpoint) da API compatível com OpenAI",
   poolHint:
-    "Adicione várias chaves de API do mesmo provedor para o Hermes ir alternando entre elas automaticamente e dividir o uso. Assim você não estoura o limite de uma só.",
+    "Adicione várias chaves de API do mesmo provedor para o SI Agent ir alternando entre elas automaticamente e dividir o uso. Assim você não estoura o limite de uma só.",
   add: "Adicionar",
   remove: "Remover",
   keyLabel: "Chave",
   empty: "(vazio)",
   dataSection: "Dados",
   dataHint:
-    "Faça uma cópia de segurança ou restaure suas configurações, histórico, habilidades e memória do Hermes.",
+    "Faça uma cópia de segurança ou restaure suas configurações, histórico, habilidades e memória do SI Agent.",
   backingUp: "Salvando cópia...",
   exportBackup: "Salvar cópia (backup)",
   importing: "Importando...",
@@ -104,10 +104,10 @@ export default {
   debugDump: "Relatório técnico",
   migrationDetected: "Encontramos uma instalação do OpenClaw",
   migrationDesc:
-    "Achamos o OpenClaw em <code>{{path}}</code>. Você pode trazer suas configurações, chaves de API, histórico e habilidades para o Hermes.",
+    "Achamos o OpenClaw em <code>{{path}}</code>. Você pode trazer suas configurações, chaves de API, histórico e habilidades para o SI Agent.",
   migrationDismiss: "Não mostrar de novo",
   migrating: "Trazendo seus dados...",
-  migrateToHermes: "Trazer para o Hermes",
+  migrateToHermes: "Trazer para o SI Agent",
   skip: "Pular",
   appearanceHint: "Deixe a aparência do app do jeito que você gosta",
   apiKeyPlaceholder: "Chave da API",
@@ -115,12 +115,12 @@ export default {
   connectionSection: "Conexão",
   modeLocal: "Neste computador",
   modeRemote: "Remoto",
-  modeLocalHint: "Usar o Hermes instalado neste computador",
+  modeLocalHint: "Usar o SI Agent instalado neste computador",
   modeRemoteHint:
-    "Conectar a um servidor do Hermes na sua rede ou na nuvem",
+    "Conectar a um servidor do SI Agent na sua rede ou na nuvem",
   remoteUrl: "URL do servidor",
   remoteUrlHint:
-    "Endereço (URL) do servidor do Hermes — ele precisa responder em /health e /v1/chat/completions",
+    "Endereço (URL) do servidor do SI Agent — ele precisa responder em /health e /v1/chat/completions",
   remoteApiKey: "Chave da API",
   remoteApiKeyHint:
     "Precisa ser igual à API_SERVER_KEY do servidor remoto. Deixe vazio se o servidor aceitar conexões sem autenticação.",
@@ -129,20 +129,20 @@ export default {
   save: "Salvar",
   serverConfigTitle: "Configuração do servidor",
   serverConfigHint:
-    "Você está conectado a um servidor remoto do Hermes. A escolha dos modelos, as chaves de API dos provedores e as credenciais ficam no próprio servidor, nos arquivos <code>~/.hermes/.env</code> e <code>config.yaml</code>. Edite por lá e reinicie o servidor.",
+    "Você está conectado a um servidor remoto do SI Agent. A escolha dos modelos, as chaves de API dos provedores e as credenciais ficam no próprio servidor, nos arquivos <code>~/.hermes/.env</code> e <code>config.yaml</code>. Edite por lá e reinicie o servidor.",
   connectionMode: "Modo",
   switchedToLocal: "Pronto, agora você está usando este computador",
 
   // Community
   communityTitle: "Comunidade",
   communityHint:
-    "Entre no nosso canal do Discord para tirar dúvidas, relatar problemas e conversar com outras pessoas que usam o Hermes.",
+    "Entre no nosso canal do Discord para tirar dúvidas, relatar problemas e conversar com outras pessoas que usam o SI Agent.",
   joinDiscord: "Entrar no canal do Discord",
 
   // SSH & Server Config
   modeSsh: "Túnel SSH",
   modeSshHint:
-    "Faz um túnel até um Hermes remoto por SSH — sem precisar abrir portas nem criar chaves de API.",
+    "Faz um túnel até um SI Agent remoto por SSH — sem precisar abrir portas nem criar chaves de API.",
   sessionDisabledTitle:
     "Histórico desativado — a API_SERVER_KEY não foi definida",
   sessionDisabledDesc:
@@ -153,13 +153,13 @@ export default {
   remoteEnvSshDesc:
     "Modo SSH: adicione API_SERVER_KEY=<sua-chave> em ~/.hermes/profiles/<perfil>/.env no servidor remoto e reinicie as conexões por lá.",
   remoteEnvDesc:
-    "Modo remoto: adicione API_SERVER_KEY=<sua-chave> no arquivo .env do seu servidor remoto do Hermes e reinicie as conexões.",
+    "Modo remoto: adicione API_SERVER_KEY=<sua-chave> no arquivo .env do seu servidor remoto do SI Agent e reinicie as conexões.",
   sshHost: "Host SSH",
   sshPort: "Porta SSH",
   sshUsername: "Usuário",
   sshKeyPath: "Caminho da chave privada",
   sshKeyPathOptional: "(opcional, o padrão é ~/.ssh/id_rsa)",
-  sshRemotePort: "Porta do Hermes remoto",
+  sshRemotePort: "Porta do SI Agent remoto",
   sshRemotePortDefault: "(padrão 8642)",
   sshHint:
     "Confira se você consegue rodar ssh {{cmd}} sem pedir senha. Na primeira conexão, a chave do host é confiada e guardada em ~/.ssh/known_hosts; se essa chave mudar depois, o SSH vai recusar a conexão por segurança.",
@@ -170,17 +170,17 @@ export default {
   connectSsh: "Conectar por SSH",
   sshTitle: "Conectar por SSH",
   sshSubtitle:
-    "Faz um túnel até um Hermes remoto por SSH — sem precisar abrir portas nem criar chaves de API.",
+    "Faz um túnel até um SI Agent remoto por SSH — sem precisar abrir portas nem criar chaves de API.",
   sshHostPlaceholder: "192.168.1.100 ou meuservidor.local",
   sshUsernamePlaceholder: "hermes",
   sshErrorRequired: "Informe o host e o usuário.",
   sshErrorConnection:
-    "Não foi possível conectar por SSH nem chegar ao Hermes no servidor remoto. Confira se:\n• A chave SSH está correta (ou se o padrão ~/.ssh/id_rsa funciona)\n• As conexões do Hermes estão rodando no servidor remoto\n• A porta remota está correta (padrão 8642)",
+    "Não foi possível conectar por SSH nem chegar ao SI Agent no servidor remoto. Confira se:\n• A chave SSH está correta (ou se o padrão ~/.ssh/id_rsa funciona)\n• As conexões do SI Agent estão rodando no servidor remoto\n• A porta remota está correta (padrão 8642)",
   sshErrorFailed: "O teste de conexão SSH falhou: {{msg}}",
   sshErrorFailedSimple: "O teste de conexão SSH falhou.",
   remoteErrorUrl: "Digite uma URL.",
   remoteErrorConnection:
-    "Não conseguimos chegar ao Hermes nesta URL. Confira a URL e a chave de API.\n\nDeixe a chave vazia se o servidor aceitar conexões sem autenticação (por exemplo, por um túnel SSH para localhost).",
+    "Não conseguimos chegar ao SI Agent nesta URL. Confira a URL e a chave de API.\n\nDeixe a chave vazia se o servidor aceitar conexões sem autenticação (por exemplo, por um túnel SSH para localhost).",
   remoteErrorFailed: "O teste de conexão falhou.",
   sshSuccess: "Túnel SSH conectado!",
   sshErrorRequiredSimple: "Informe o host e o usuário",

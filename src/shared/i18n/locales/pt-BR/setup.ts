@@ -50,7 +50,7 @@ export default {
   saving: "Salvando...",
   apiKeyLabel: "Chave da API {{provider}}",
   noApiKeyRequired:
-    "{{provider}} não precisa de chave de API. O Hermes usa o login que você já tem no seu computador (CLI/OAuth).",
+    "{{provider}} não precisa de chave de API. O SI Agent usa o login que você já tem no seu computador (CLI/OAuth).",
   localNoKeyNeeded: "Não precisa de chave de API",
   localLlm: "IA no seu computador",
   modelBaseUrlPlaceholder: "http://localhost:1234/v1",

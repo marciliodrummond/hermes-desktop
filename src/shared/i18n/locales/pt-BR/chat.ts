@@ -13,7 +13,7 @@ export default {
   reasoningEffort: {
     title: "Nível de raciocínio",
     auto: "Automático",
-    autoDescription: "Deixe o Hermes e o modelo decidirem.",
+    autoDescription: "Deixe o SI Agent e o modelo decidirem.",
     hint: "O automático é o mais seguro. Os níveis manuais podem ser ignorados ou recusados por modelos que não dão suporte a nível de raciocínio.",
     saveError:
       "Não foi possível salvar o nível de raciocínio. Sua escolha anterior foi restaurada.",
@@ -41,11 +41,11 @@ export default {
   approve: "Aprovar",
   deny: "Recusar",
   clarify: {
-    defaultQuestion: "O Hermes precisa que você responda algo.",
+    defaultQuestion: "O SI Agent precisa que você responda algo.",
     placeholder: "Escreva sua resposta…  (Ctrl+Enter para enviar)",
     send: "Enviar",
-    skip: "Pular — deixe o Hermes decidir",
-    skipped: "Pulado — o Hermes decidiu",
+    skip: "Pular — deixe o SI Agent decidir",
+    skipped: "Pulado — o SI Agent decidiu",
     error:
       "Não foi possível entregar sua resposta — a vez pode ter terminado. Tente de novo.",
   },
@@ -128,7 +128,7 @@ export default {
     model: "Ver ou trocar o modelo atual",
     memory: "Ver o que o agente lembra",
     persona: "Ver a personalidade atual",
-    version: "Ver a versão do Hermes",
+    version: "Ver a versão do SI Agent",
   },
   queued:
     "{{count}} mensagem(ns) na fila — serão enviadas quando o agente terminar",

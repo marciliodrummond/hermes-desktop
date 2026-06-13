@@ -16,7 +16,7 @@ export default {
 
   // Remote-mode unsupported notice
   remoteUnsupportedTitle:
-    "O Quadro só funciona com o Hermes instalado no seu computador ou pelo túnel SSH.",
+    "O Quadro só funciona com o SI Agent instalado no seu computador ou pelo túnel SSH.",
   remoteUnsupportedHint:
     "No modo remoto simples (HTTP + chave de API) o Quadro ainda não está disponível. Mude para o modo local ou túnel SSH nas Configurações para usar o quadro.",
 
