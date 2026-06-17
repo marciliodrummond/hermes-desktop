@@ -1,6 +1,6 @@
 {
   "name": "hermes-desktop",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "SI Agent Desktop — powered by Hermes Agent",
   "main": "./out/main/index.js",
   "author": "Super Inteligencia",
